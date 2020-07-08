@@ -3,6 +3,7 @@
    Distributed under the ISC license, see terms at the end of the file.
    fmt v0.8.5
   ---------------------------------------------------------------------------*)
+open Fmt_top_cap_tee
 
 let () = ignore (Toploop.use_file Format.err_formatter "fmt_top_init.ml")
 

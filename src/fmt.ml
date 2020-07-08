@@ -4,6 +4,8 @@
    fmt v0.8.5
   ---------------------------------------------------------------------------*)
 
+open Fmt_cap_tee
+
 (* Errors *)
 
 let err_str_formatter = "Format.str_formatter can't be set."
