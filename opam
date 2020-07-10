@@ -36,12 +36,10 @@ patches: [ "pkg.patch" ]
 depopts: [ "base-unix" "cmdliner" ]
 conflicts: [ "cmdliner" {< "0.9.8"} ]
 
-build: [[
-  "ocaml" "pkg/pkg.ml" "build"
-          "--dev-pkg" "%{pinned}%"
-          "--with-base-unix" "false"
-          "--with-cmdliner" "false" 
-           "--toolchain" "riscv"]]
+build: [
+  [make "add-cap-files"]
+  ["ocaml" "pkg/pkg.ml" "build" "--dev-pkg" "%{pinned}%" "--with-base-unix" "false" "--with-cmdliner" "false" "--toolchain" "riscv"]
+]
 
 install: [["opam-installer" "--prefix=%{prefix}%/riscv-sysroot" "fmt.install"]]
 url {
