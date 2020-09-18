@@ -1,4 +1,4 @@
-true : asm, bin_annot, safe_string, package(result), package(uchar)
+true : asm, bin_annot, safe_string, package(result), package(uchar), function-sections
 
 <src> : include
 <src/fmt_tty*> : package(unix)
