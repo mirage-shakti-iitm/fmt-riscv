@@ -1,7 +1,7 @@
 (*---------------------------------------------------------------------------
    Copyright (c) 2015 The fmt programmers. All rights reserved.
    Distributed under the ISC license, see terms at the end of the file.
-   fmt v0.8.9
+   fmt v0.8.8
   ---------------------------------------------------------------------------*)
 
 (** {!Cmdliner} support for [Fmt]. *)
