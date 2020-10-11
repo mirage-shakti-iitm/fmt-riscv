@@ -1,7 +1,7 @@
 (*---------------------------------------------------------------------------
-   Copyright (c) 2015 Daniel C. Bünzli. All rights reserved.
+   Copyright (c) 2015 The fmt programmers. All rights reserved.
    Distributed under the ISC license, see terms at the end of the file.
-   fmt v0.8.5
+   fmt v0.8.9
   ---------------------------------------------------------------------------*)
 
 let is_infix ~affix s =
@@ -24,8 +24,8 @@ let is_infix ~affix s =
 
 let setup ?style_renderer ?utf_8 oc =
   let ppf =
-    if oc == Pervasives.stdout then Fmt.stdout else
-    if oc == Pervasives.stderr then Fmt.stderr else
+    if oc == Stdlib.stdout then Fmt.stdout else
+    if oc == Stdlib.stderr then Fmt.stderr else
     Format.formatter_of_out_channel oc
   in
   let style_renderer = match style_renderer with
@@ -47,7 +47,7 @@ let setup ?style_renderer ?utf_8 oc =
   | Some b -> b
   | None ->
       let has_utf_8 var =
-        try is_infix "UTF-8" (String.uppercase (Sys.getenv var))
+        try is_infix "UTF-8" (String.uppercase_ascii (Sys.getenv var))
         with Not_found -> false
       in
       has_utf_8 "LANG" || has_utf_8 "LC_ALL" || has_utf_8 "LC_CTYPE"
@@ -62,7 +62,7 @@ let setup_std_outputs ?style_renderer ?utf_8 () =
   ()
 
 (*---------------------------------------------------------------------------
-   Copyright (c) 2015 Daniel C. Bünzli
+   Copyright (c) 2015 The fmt programmers
 
    Permission to use, copy, modify, and/or distribute this software for any
    purpose with or without fee is hereby granted, provided that the above

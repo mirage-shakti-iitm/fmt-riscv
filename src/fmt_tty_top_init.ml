@@ -1,13 +1,13 @@
 (*---------------------------------------------------------------------------
-   Copyright (c) 2015 Daniel C. Bünzli. All rights reserved.
+   Copyright (c) 2015 The fmt programmers. All rights reserved.
    Distributed under the ISC license, see terms at the end of the file.
-   fmt v0.8.5
+   fmt v0.8.9
   ---------------------------------------------------------------------------*)
 
 let () = Fmt_tty.setup_std_outputs ()
 
 (*---------------------------------------------------------------------------
-   Copyright (c) 2015 Daniel C. Bünzli
+   Copyright (c) 2015 The fmt programmers
 
    Permission to use, copy, modify, and/or distribute this software for any
    purpose with or without fee is hereby granted, provided that the above

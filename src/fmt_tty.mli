@@ -1,7 +1,7 @@
 (*---------------------------------------------------------------------------
-   Copyright (c) 2015 Daniel C. Bünzli. All rights reserved.
+   Copyright (c) 2015 The fmt programmers. All rights reserved.
    Distributed under the ISC license, see terms at the end of the file.
-   fmt v0.8.5
+   fmt v0.8.9
   ---------------------------------------------------------------------------*)
 
 (** [Fmt] TTY setup.
@@ -14,9 +14,7 @@
        used otherwise.}
     {- {!Fmt.set_utf_8}. [true] is used if one of the following
        environment variables has ["UTF-8"] as a case insensitive
-       substring: [LANG], [LC_ALL], [LC_CTYPE].}}
-
-    {e v0.8.5 - {{:http://erratique.ch/software/fmt }homepage}} *)
+       substring: [LANG], [LC_ALL], [LC_CTYPE].}} *)
 
 (** {1:tty_setup TTY setup} *)
 
@@ -36,7 +34,7 @@ val setup_std_outputs : ?style_renderer:Fmt.style_renderer -> ?utf_8:bool ->
     on {!stdout} and {!stderr}. *)
 
 (*---------------------------------------------------------------------------
-   Copyright (c) 2015 Daniel C. Bünzli
+   Copyright (c) 2015 The fmt programmers
 
    Permission to use, copy, modify, and/or distribute this software for any
    purpose with or without fee is hereby granted, provided that the above
