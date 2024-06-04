@@ -1,4 +1,4 @@
-true : bin_annot, safe_string, package(seq), package(stdlib-shims), function_sections, default_compartment_id(6)
+true : bin_annot, safe_string, package(seq), package(stdlib-shims), function_sections, default_compartment_id(20)
 <_b0> : -traverse
 <src/fmt_tty*> : package(unix)
 <src/fmt_cli*> : package(cmdliner)
